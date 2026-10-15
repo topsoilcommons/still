@@ -27,7 +27,9 @@
   .word{border:1px solid var(--accent);color:var(--accent);background:#fff;border-radius:999px;
     padding:8px 16px;font-size:15px;font-weight:600;cursor:pointer}
   .word[aria-pressed="true"]{background:var(--accent);color:var(--accent-ink)}
-  .response{min-height:30px;text-align:center;font-size:16.5px;margin:16px 0 0}
+  .response{min-height:30px;text-align:center;font-size:16.5px;margin:16px 0 0;transition:opacity .3s ease}
+  .response.fade{opacity:0}
+  .rounds{font-size:14.5px;color:var(--soft);margin:0;min-height:20px;text-align:center}
   .pacer{display:flex;flex-direction:column;align-items:center;gap:14px}
   .circle{width:150px;height:150px;border-radius:50%;background:var(--chip);
     border:2px solid var(--accent);display:flex;align-items:center;justify-content:center;
@@ -67,7 +69,7 @@
 
 <section>
   <h2>Check in</h2>
-  <p class="sub">Pick the word closest to how you feel right now.</p>
+  <p class="sub" id="checkinPrompt">Pick the word closest to how you feel right now.</p>
   <div class="panel">
     <div class="words" id="words"></div>
     <p class="response" id="response" aria-live="polite"></p>
@@ -83,6 +85,7 @@
       <button class="btn solid" id="startBtn" type="button">Start</button>
       <button class="btn" id="stopBtn" type="button">Stop</button>
     </div>
+    <p class="rounds" id="roundsNote" aria-live="polite"></p>
   </div>
 </section>
 
@@ -153,7 +156,12 @@
       var all = wordsBox.querySelectorAll(".word");
       all.forEach(function(x){ x.setAttribute("aria-pressed", "false"); });
       b.setAttribute("aria-pressed", "true");
-      response.textContent = LINES[w];
+      document.getElementById("checkinPrompt").textContent = "Checked in.";
+      response.classList.add("fade");
+      setTimeout(function(){
+        response.textContent = LINES[w];
+        response.classList.remove("fade");
+      }, 180);
     });
     wordsBox.appendChild(b);
   });
@@ -187,9 +195,13 @@
     phaseLabel.textContent = st.phase.name;
     rafId = requestAnimationFrame(frame);
   }
+  var roundsNote = document.getElementById("roundsNote");
+  var started = false;
   document.getElementById("startBtn").addEventListener("click", function(){
     if (running) return;
     running = true;
+    started = true;
+    roundsNote.textContent = "";
     startTime = performance.now();
     rafId = requestAnimationFrame(frame);
   });
@@ -198,6 +210,16 @@
     if (rafId) cancelAnimationFrame(rafId);
     circle.style.transform = "scale(1)";
     phaseLabel.textContent = "Ready";
+    if (started) {
+      // Rounds are counted from total elapsed time, the same clock the
+      // phase math uses, so the count cannot drift either. The phase
+      // math itself is untouched.
+      var rounds = Math.floor((performance.now() - startTime) / CYCLE);
+      roundsNote.textContent = rounds > 0
+        ? "You breathed " + rounds + (rounds === 1 ? " round." : " rounds.")
+        : "Stopped. Come back any time.";
+      started = false;
+    }
   });
 
   // Writing space. localStorage only. No network, ever.
@@ -211,7 +233,8 @@
   document.getElementById("saveBtn").addEventListener("click", function(){
     try {
       localStorage.setItem(KEY, area.value);
-      savedNote.textContent = "Saved on this device.";
+      var now = new Date();
+      savedNote.textContent = "Saved on this device just now, at " + now.toLocaleTimeString([], { hour: "numeric", minute: "2-digit" }) + ".";
     } catch (e) {
       savedNote.textContent = "This browser would not save. Use Download instead.";
     }
@@ -227,8 +250,22 @@
     document.body.removeChild(a);
     URL.revokeObjectURL(url);
   });
-  document.getElementById("clearBtn").addEventListener("click", function(){
-    if (!window.confirm("Clear everything in this writing space, including the saved copy on this device?")) return;
+  var clearBtn = document.getElementById("clearBtn");
+  var clearArmed = false;
+  var clearTimer = null;
+  function disarmClear(){
+    clearArmed = false;
+    clearBtn.textContent = "Clear";
+    if (clearTimer) { clearTimeout(clearTimer); clearTimer = null; }
+  }
+  clearBtn.addEventListener("click", function(){
+    if (!clearArmed) {
+      clearArmed = true;
+      clearBtn.textContent = "Clear everything? Tap again to confirm";
+      clearTimer = setTimeout(disarmClear, 5000);
+      return;
+    }
+    disarmClear();
     area.value = "";
     try { localStorage.removeItem(KEY); } catch (e) { /* storage unavailable */ }
     savedNote.textContent = "Cleared.";
