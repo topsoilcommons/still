@@ -19,7 +19,7 @@ State as of October 15, 2026. Every line carries its evidence; a line without ev
 - [ ] Repo topics set
 - [ ] Good first issues open, sized in hours (first candidate: rerun the pacer test on a second machine and post the result)
 - [ ] Tagged release v0.1 once CI is green
-- [x] Live demo answering at https://auroracommons.github.io/still/
+- [x] Live demo answering at https://topsoilcommons.github.io/still/
 
 ## Verification baseline (October 15, 2026)
 - [x] BASELINE.md created: the Loop, the fundamentals measured on October 15, 2026 (page weight 12.9 KB, network calls 0, pacer drift re-run, reading level Flesch-Kincaid grade 2.5), the weakest fundamental named (languages offered: 1). Every cycle from here is logged in BASELINE.md, newest first

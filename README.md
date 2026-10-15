@@ -18,16 +18,16 @@ At the bottom of the page, clearly separated, is a crisis block with the US line
 
 ## Live demo
 
-https://auroracommons.github.io/still/ (link placeholder until the repository and Pages are enabled)
+https://topsoilcommons.github.io/still/ (link placeholder until the repository and Pages are enabled)
 
-The need, in the words of the map: a mind that can rest. Treatment and support for suffering, freedom from constant dread, and hope treated as infrastructure: a credible path, proof someone like you walked it, a first step small enough to take today. The full map is [The Ascent](https://github.com/auroracommons/auroracommons/blob/main/NEEDS.md) on the Aurora Commons profile.
+The need, in the words of the map: a mind that can rest. Treatment and support for suffering, freedom from constant dread, and hope treated as infrastructure: a credible path, proof someone like you walked it, a first step small enough to take today. The full map is [The Ascent](https://github.com/topsoilcommons/topsoilcommons/blob/main/NEEDS.md) on the Topsoil Commons profile.
 
 ## Proof
 
 Functional only, as of October 15, 2026. No health numbers exist here and none are claimed.
 
 - **Pacer timing, measured.** The pacer computes its phase from total elapsed time, not from chained timers, so the rhythm cannot drift. The test in test/test_pacer.js runs that same phase math for 3 full cycles (14 seconds each, 42 seconds total) and records when each phase change is observed. Result of the run on October 15, 2026 (full output in [test/pacer_result.json](test/pacer_result.json)): 9 of 9 phase transitions observed, maximum drift 1 ms from the ideal times, mean drift 0.56 ms.
-- **No network calls, verified by inspection.** The demo is one self contained HTML file: inline styles, inline script, no external fonts, images, scripts, or stylesheets. Reading the code shows no fetch, no XMLHttpRequest, no beacon, and no analytics. The only connections a visitor can trigger are two ordinary links they choose to click (the grounding source and the Aurora Commons profile). Open the file from disk with the network off and everything on the page works.
+- **No network calls, verified by inspection.** The demo is one self contained HTML file: inline styles, inline script, no external fonts, images, scripts, or stylesheets. Reading the code shows no fetch, no XMLHttpRequest, no beacon, and no analytics. The only connections a visitor can trigger are two ordinary links they choose to click (the grounding source and the Topsoil Commons profile). Open the file from disk with the network off and everything on the page works.
 - **Writing stays on the device.** The writing space reads and writes one localStorage key (still-writing) in the visitor's own browser. Save, Download, and Clear act on that local copy only. Nothing is transmitted; there is no server to transmit to.
 - **Crisis lines, as published by their operators, checked October 15, 2026.** Call or text 988 and chat at 988lifeline.org, free and 24/7, as published by the FCC (fcc.gov/988-suicide-and-crisis-lifeline) and SAMHSA (samhsa.gov, 988 FAQ). Text HOME to 741741 for free, 24/7, confidential support, as published by Crisis Text Line (crisistextline.org/about-us/faq).
 - **How this page improves.** The basic counts are checked, the weakest count is named, and one checked change is made at a time. [BASELINE.md](BASELINE.md) holds the numbers and the open log of cycles.
@@ -35,7 +35,7 @@ Functional only, as of October 15, 2026. No health numbers exist here and none a
 
 ## Contribute
 
-Ways to take part are in [COLLABORATE.md](COLLABORATE.md) and [CONTRIBUTING.md](CONTRIBUTING.md). More ways to take part are in the [Open Table](https://github.com/auroracommons/auroracommons/blob/main/OPEN_TABLE.md) on the profile: one rule, raise the floor beneath everyone, and credit in a public list for checked work.
+Ways to take part are in [COLLABORATE.md](COLLABORATE.md) and [CONTRIBUTING.md](CONTRIBUTING.md). More ways to take part are in the [Open Table](https://github.com/topsoilcommons/topsoilcommons/blob/main/OPEN_TABLE.md) on the profile: one rule, raise the floor beneath everyone, and credit in a public list for checked work.
 
 ## License
 
@@ -45,6 +45,6 @@ MIT. See [LICENSE](LICENSE). Copyright (c) 2026 Still contributors.
 
 The 5-4-3-2-1 grounding practice, from the University of Rochester Medical Center's public writing. The 988 Suicide and Crisis Lifeline and Crisis Text Line, whose published lines the crisis block carries word for word in short form. Plain HTML, CSS, and JavaScript that any browser already knows how to run.
 
-Its record is filed in [the Index](https://auroracommons.github.io/index/).
+Its record is filed in [the Index](https://topsoilcommons.github.io/index/).
 
 Advised by Groundskeeper.

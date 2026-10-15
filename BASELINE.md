@@ -7,7 +7,7 @@ The Loop. Still improves by one measured cycle at a time. (1) Measure the fundam
 ## Fundamentals, measured October 15, 2026
 
 - **Page weight: 12.9 KB.** One self contained HTML file, 12,869 bytes (KB counted at 1,000 bytes). No other file loads.
-- **Network calls: 0.** Verified by grep on the shipped file: no fetch, no XMLHttpRequest, no sendBeacon, no WebSocket, no external script, style, or image. The only links on the page are two ordinary anchors a visitor may choose to tap: the grounding source and the Aurora Commons profile.
+- **Network calls: 0.** Verified by grep on the shipped file: no fetch, no XMLHttpRequest, no sendBeacon, no WebSocket, no external script, style, or image. The only links on the page are two ordinary anchors a visitor may choose to tap: the grounding source and the Topsoil Commons profile.
 - **Pacer accuracy: maximum drift 1 ms, mean drift 0.56 ms.** test/test_pacer.js re-run on October 15, 2026: 3 full cycles, 42 seconds, 9 of 9 phase transitions observed. Full output at test/pacer_result.json.
 - **Reading level of the visible copy: Flesch-Kincaid grade 2.5** (Flesch reading ease 90). Measured on the page's visible text plus the eight check in lines: 402 words, 57 sentences. Tool: the Flesch-Kincaid formula, computed with a small Python script written for this measurement.
 - **Crisis lines last verified: October 15, 2026.** Checked against the FCC and SAMHSA pages for call or text 988 and chat at 988lifeline.org, and Crisis Text Line's own FAQ for text HOME to 741741.
