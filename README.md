@@ -2,6 +2,10 @@
 
 **Layer 1 of the Ascent: the mind at peace.** Mental health, steadiness, hope.
 
+Aurora Commons addresses the hierarchy of human needs through open source.
+
+The motto: Stand on the shoulders of giants.
+
 The need, in the words of the map: a mind that can rest. Treatment and support for suffering, freedom from constant dread, and hope treated as infrastructure: a credible path, proof someone like you walked it, a first step small enough to take today. The full map is [The Ascent](https://github.com/auroracommons/auroracommons/blob/main/NEEDS.md) on the Aurora Commons profile.
 
 ## What Still is
