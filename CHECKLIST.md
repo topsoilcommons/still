@@ -22,6 +22,7 @@ State as of October 15, 2026. Every line carries its evidence; a line without ev
 - [x] Live demo answering at https://auroracommons.github.io/still/
 
 ## Verification baseline (October 15, 2026)
+- [x] BASELINE.md created: the Loop, the fundamentals measured on October 15, 2026 (page weight 12.9 KB, network calls 0, pacer drift re-run, reading level Flesch-Kincaid grade 2.5), the weakest fundamental named (languages offered: 1). Every cycle from here is logged in BASELINE.md, newest first
 - Pacer timing: test/test_pacer.js run for 3 full cycles (42 seconds). 9 of 9 phase transitions observed. Maximum drift 1 ms, mean drift 0.56 ms. Full output in test/pacer_result.json
 - No network calls: verified by reading the single HTML file end to end. Inline styles and script only, no fetch, no XMLHttpRequest, no external assets
 - Writing space: localStorage key still-writing only; Save, Download, and Clear act on the local copy
@@ -29,6 +30,7 @@ State as of October 15, 2026. Every line carries its evidence; a line without ev
 - Grounding practice: 5-4-3-2-1, written in our own words, source named on the page (University of Rochester Medical Center, Behavioral Health Partners blog)
 
 ## Upgrade queue
+- [ ] Cycle 1 fix, from BASELINE.md: a Spanish version of the page's visible copy, checked by a fluent reader before it ships, then re-measured
 - [ ] A second timing run on different hardware, posted as an issue or pull request, so the drift figure rests on more than one machine
 - [ ] Readability pass on the check in lines with a plain language reader
 - [ ] A printed card version of the page for rooms without a screen, same words, same rules
