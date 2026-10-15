@@ -13,12 +13,13 @@ State as of October 15, 2026. Every line carries its evidence; a line without ev
 - [x] Crisis block present on the page, checked against operator and federal pages on October 15, 2026
 
 ## The extra 10 percent
-- [ ] Repository created on GitHub and publish tree pushed (later step: repo creation and deploy key)
+- [x] Repository created on GitHub and publish tree pushed (deploy key with write access)
 - [ ] CI workflow present and green on GitHub runners
-- [ ] Repo description and topics set
+- [x] Repo description set
+- [ ] Repo topics set
 - [ ] Good first issues open, sized in hours (first candidate: rerun the pacer test on a second machine and post the result)
 - [ ] Tagged release v0.1 once CI is green
-- [ ] Live demo answering at https://auroracommons.github.io/still/
+- [x] Live demo answering at https://auroracommons.github.io/still/
 
 ## Verification baseline (October 15, 2026)
 - Pacer timing: test/test_pacer.js run for 3 full cycles (42 seconds). 9 of 9 phase transitions observed. Maximum drift 1 ms, mean drift 0.56 ms. Full output in test/pacer_result.json
