@@ -36,9 +36,9 @@
   section{padding:34px 0 4px}
   h2{font-size:22px;letter-spacing:-.4px;margin:0 0 4px}
   .sub{color:var(--soft);margin:0 0 16px;font-size:15px;max-width:520px}
-  .panel{background:var(--card);border:1px solid var(--line);border-radius:0;padding:20px}
+  .panel{background:var(--card);border:1px solid var(--line);padding:20px}
   .words{display:flex;flex-wrap:wrap;gap:8px;justify-content:center}
-  .word{border:1px solid var(--accent);color:var(--accent);background:#fff;border-radius:0;
+  .word{border:1px solid var(--accent);color:var(--accent);background:#fff;
     padding:8px 16px;font-size:15px;font-weight:600;cursor:pointer}
   .word[aria-pressed="true"]{background:var(--accent);color:var(--accent-ink)}
   .response{min-height:30px;text-align:center;font-size:16.5px;margin:16px 0 0;transition:opacity .3s ease}
@@ -49,51 +49,57 @@
     border:2px solid var(--accent);display:flex;align-items:center;justify-content:center;
     font-weight:700;font-size:16px;color:var(--accent);text-align:center;padding:10px}
   .btns{display:flex;gap:8px;justify-content:center;flex-wrap:wrap}
-  .btn{border:1px solid var(--accent);color:var(--accent);background:#fff;border-radius:0;
+  .btn{border:1px solid var(--accent);color:var(--accent);background:#fff;
     padding:8px 16px;font-size:14.5px;font-weight:600;cursor:pointer}
   .btn.solid{background:var(--accent);color:var(--accent-ink)}
-  textarea{width:100%;min-height:170px;border:1px solid var(--line);border-radius:0;
+  textarea{width:100%;min-height:170px;border:1px solid var(--line);
     padding:12px;font:inherit;font-size:15.5px;background:#fff;color:var(--ink);resize:vertical}
   .saved{font-size:13.5px;color:var(--soft);text-align:center;margin-top:8px;min-height:18px}
   ol.steps{margin:6px 0 0;padding-left:22px;font-size:15.5px}
   ol.steps li{margin-bottom:6px}
   .srclink{text-align:center;font-size:14px;margin-top:10px}
   a{color:var(--accent);font-weight:600}
-  .crisis{margin:44px 0 0;border:2px solid var(--ink);border-radius:0;padding:20px;background:#fff}
+  .crisis{margin:44px 0 0;border:2px solid var(--ink);padding:20px;background:#fff}
   .crisis h2{text-align:left}
   .crisis p{font-size:16px;margin:6px 0}
   .crisis .big{font-size:19px;font-weight:800}
   footer{padding:44px 0 58px;margin-top:40px;border-top:1px solid var(--line);
     color:var(--soft);font-size:14px;text-align:center}
   footer a{color:var(--accent);text-decoration:none;font-weight:600}
-  .commons-bar{max-width:680px;margin:0 auto;padding:10px 20px 8px;font-size:14px;line-height:1.55;border-bottom:1px solid var(--line)}
-  .commons-bar a,.commons-bar span{margin-right:16px}
+  .commons-bar{position:sticky;top:0;z-index:10;background:var(--bg);margin:0;padding:0 20px;font-size:14px;line-height:1.55;border-bottom:1px solid var(--line);display:flex;flex-wrap:wrap;align-items:stretch}
+  .commons-bar a,.commons-bar span{display:inline-flex;align-items:center;min-height:44px;margin-right:16px}
   .commons-bar a{color:var(--ink);text-decoration:none;font-weight:400}
   .commons-bar a:hover{text-decoration:underline}
-  .commons-bar .wordmark{font-weight:800}
+  .commons-bar .wordmark{font-weight:600}
   .commons-bar span{font-weight:700}
+  .skip{position:absolute;left:-9999px;top:0;background:var(--bg);color:var(--accent);padding:10px 16px;font-weight:600;z-index:20}
+  .skip:focus{left:0}
+  :focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+  [id]{scroll-margin-top:72px}
   .commons-footer{max-width:680px;margin-left:auto;margin-right:auto;padding-left:20px;padding-right:20px}
   .driftband{position:relative;height:14px;border:1px solid var(--line);background:#fff;max-width:520px;margin:0 0 10px}
   .driftmark{position:absolute;top:0;width:3px;height:100%;background:var(--ink)}
 </style>
 </head>
 <body>
+<a class="skip" href="#content">Skip to the content</a>
 <nav class="commons-bar" aria-label="Aurora Commons sites">
   <a class="wordmark" href="https://auroracommons.github.io/auroracommons/">Aurora Commons</a>
   <a href="https://auroracommons.github.io/auroracommons/foundations.html">Foundations</a>
   <a href="https://auroracommons.github.io/ground/">Ground</a>
-  <span aria-current="page">Still</span>
+  <span aria-current="page">Still (you are here)</span>
   <a href="https://auroracommons.github.io/atlas/">Atlas</a>
   <a href="https://auroracommons.github.io/cohort/">Cohort</a>
   <a href="https://auroracommons.github.io/graph/">Graph</a>
   <a href="https://auroracommons.github.io/machine/">Machine</a>
   <a href="https://auroracommons.github.io/lumen/">Lumen</a>
 </nav>
-<div class="wrap">
+<div class="wrap" id="content">
 
 <header>
   <h1>Still</h1>
   <p class="tag">A quiet page. A check in, a breathing pacer, a place to write. Nothing here leaves your device.</p>
+  <p class="note">One of the seven tools of Aurora Commons. Still is Layer 1, the mind at peace.</p>
   <p class="note">Still is a quiet tool. It is not medical care.</p>
 </header>
 
@@ -112,14 +118,14 @@
 <!-- drift:begin -->
 <section aria-labelledby="drift-h">
   <h2 id="drift-h">Pacer timing, measured</h2>
-  <p class="sub">4 test runs of this pacer stand recorded in test/pacer_measurements.json in this repository, counted on October 15, 2026. Each run watched 9 phase changes over 3 full rounds, and all 9 changes landed in every run. The largest drift in each run was 1, 2, 3, and 18 milliseconds.</p>
-  <div class="driftband" role="img" aria-label="A band from 0 to 20 milliseconds with one mark per recorded test run, at 1, 2, 3, and 18 milliseconds.">
-    <span class="driftmark" style="left:5.0%" title="Run 1: largest drift 1 milliseconds"></span>
+  <p class="sub">The pacer keeps close to its marks. Its timing wanders by a hair from round to round, and every test run the builders recorded is shown on the strip below, just as it was measured. One run, taken while the machine was busy with other work, wandered more than the others, and it is shown too.</p>
+  <div class="driftband" role="img" aria-label="A band with one mark for each recorded test run of the pacer. Most marks sit close to the start of the band, and one mark sits farther along.">
+    <span class="driftmark" style="left:5.0%" title="Run 1: largest drift 1 millisecond"></span>
     <span class="driftmark" style="left:10.0%" title="Run 2: largest drift 2 milliseconds"></span>
     <span class="driftmark" style="left:15.0%" title="Run 3: largest drift 3 milliseconds"></span>
     <span class="driftmark" style="left:90.0%" title="Run 4: largest drift 18 milliseconds"></span>
   </div>
-  <p class="sub">Key: one mark per recorded run. A mark's place on the band is that run's largest drift from the ideal phase times. The band runs from 0 to 20 milliseconds, and one unit is one millisecond. These are builder test runs on the build machine, labeled as such in the measurements file. This page collects nothing.</p>
+  <p class="sub">Key: one mark stands for one recorded test run of the pacer. A mark's place on the band shows how far that run's timing wandered from its marks. Most marks sit close together near the start of the band, and one sits farther along. The exact times for each run are listed in the builder record at the bottom of this page.</p>
 </section>
 <!-- drift:end -->
 
@@ -169,8 +175,6 @@
   <p>Crisis Text Line connects you with a live, trained volunteer Crisis Counselor. Free, confidential, 24 hours a day.</p>
 </div>
 
-<p>The layer below: <a href="https://auroracommons.github.io/ground/">Ground, the body</a></p>
-<p>The layer above: <a href="https://auroracommons.github.io/atlas/">Atlas, learning</a></p>
 <p>The research under this layer: <a href="https://auroracommons.github.io/auroracommons/foundations.html#mind-and-mental-health">Foundations, Mind and mental health</a></p>
 <p>Built on Ground: the body secured.</p>
 <p>Unlocks the ability to choose.</p>
@@ -179,6 +183,9 @@
   <p>Still is part of <a href="https://github.com/auroracommons">Aurora Commons</a>. It serves Layer 1 of the Ascent: the mind at peace.</p>
   <p>This page works fully offline once loaded. It makes no network calls. Your writing stays in this browser.</p>
   <p><a href="https://github.com/auroracommons/still/issues/new?template=report-an-error.md">Report an error on this page</a></p>
+  <p><a href="https://auroracommons.github.io/auroracommons/">Back to the home page</a></p>
+  <p>Below this layer: <a href="https://auroracommons.github.io/ground/">Ground, the body</a></p>
+  <p>Above this layer: <a href="https://auroracommons.github.io/atlas/">Atlas, learning</a></p>
 </footer>
 
 <footer class="commons-footer">
@@ -188,6 +195,22 @@
   <p>Advised by Groundskeeper.</p>
   <p><a href="https://www.linkedin.com/company/aurora-commons-io/">Aurora Commons on LinkedIn</a></p>
 </footer>
+
+<section aria-labelledby="tech-h">
+  <h2 id="tech-h">For agents and builders</h2>
+  <p class="sub">The exact record behind the pacer timing strip above, and the checks behind this page. The pacer test watches three full rounds of the breathing pattern and counts nine phase changes in all.</p>
+  <!-- drift-tech:begin -->
+<h3>Pacer drift measurements</h3>
+<p>Generated by tools/build_drift.py from test/pacer_measurements.json in this repository. Nothing in this list is typed by hand.</p>
+<ul>
+    <li>Run 1: the largest drift was 1 millisecond, and its average drift was 0.56 milliseconds. Date: October 15, 2026. Method: node test/test_pacer.js: 3 full rounds, 9 phase transitions, drift measured against the ideal phase times computed from total elapsed time. Source: Committed test artifact, test/pacer_result.json in this repository.</li>
+    <li>Run 2: the largest drift was 2 milliseconds. Date: October 15, 2026. Method: node test/test_pacer.js: 3 full rounds, 9 phase transitions, drift measured against the ideal phase times computed from total elapsed time. Source: Run recorded in the public progress log on the profile, in the entry for the plain style pass.</li>
+    <li>Run 3: the largest drift was 3 milliseconds. Date: October 15, 2026. Method: node test/test_pacer.js: 3 full rounds, 9 phase transitions, drift measured against the ideal phase times computed from total elapsed time. Source: Baseline gate run for the Index integration pass, run on the build machine and logged in that pass.</li>
+    <li>Run 4: the largest drift was 18 milliseconds, and its average drift was 2.56 milliseconds. Date: October 15, 2026. Method: node test/test_pacer.js: 3 full rounds, 9 phase transitions, drift measured against the ideal phase times computed from total elapsed time. Source: Gate run during the Index integration pass, run on the build machine while other test suites ran, and logged in that pass. The wide drift under load is kept, not smoothed away.</li>
+</ul>
+<p>Key, technical line: one mark per recorded run. A mark's place on the band is that run's largest drift from the ideal phase times. The band runs from 0 to 20 milliseconds, and one unit is one millisecond. These are builder test runs on the build machine, labeled as such in the measurements file. This page collects nothing and makes no network calls.</p>
+<!-- drift-tech:end -->
+</section>
 
 </div>
 <script>
