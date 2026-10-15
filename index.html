@@ -29,13 +29,13 @@
     font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
     line-height:1.55;-webkit-font-smoothing:antialiased}
   .wrap{max-width:680px;margin:0 auto;padding:0 20px}
-  header{padding:52px 0 4px;text-align:center}
-  h1{font-size:44px;letter-spacing:-1.2px;margin:10px 0 8px;font-weight:800}
-  .tag{font-size:17px;color:var(--soft);margin:0 auto;max-width:520px}
+  header{padding:30px 0 4px}
+  h1{font-size:44px;letter-spacing:-1.2px;margin:0 0 8px;font-weight:800}
+  .tag{font-size:17px;color:var(--soft);margin:0;max-width:520px}
   .note{margin-top:16px;font-size:14.5px;color:var(--soft)}
   section{padding:34px 0 4px}
-  h2{font-size:22px;letter-spacing:-.4px;margin:0 0 4px;text-align:center}
-  .sub{color:var(--soft);margin:0 auto 16px;text-align:center;font-size:15px;max-width:520px}
+  h2{font-size:22px;letter-spacing:-.4px;margin:0 0 4px}
+  .sub{color:var(--soft);margin:0 0 16px;font-size:15px;max-width:520px}
   .panel{background:var(--card);border:1px solid var(--line);border-radius:0;padding:20px}
   .words{display:flex;flex-wrap:wrap;gap:8px;justify-content:center}
   .word{border:1px solid var(--accent);color:var(--accent);background:#fff;border-radius:0;
@@ -66,15 +66,18 @@
   footer{padding:44px 0 58px;margin-top:40px;border-top:1px solid var(--line);
     color:var(--soft);font-size:14px;text-align:center}
   footer a{color:var(--accent);text-decoration:none;font-weight:600}
-  .commons-bar{max-width:680px;margin:0 auto;padding:24px 20px 0;font-size:14.5px;line-height:1.55}
+  .commons-bar{max-width:680px;margin:0 auto;padding:10px 20px 8px;font-size:14px;line-height:1.55;border-bottom:1px solid var(--line)}
   .commons-bar a,.commons-bar span{margin-right:16px}
+  .commons-bar a{color:var(--ink);text-decoration:none;font-weight:400}
+  .commons-bar a:hover{text-decoration:underline}
+  .commons-bar .wordmark{font-weight:800}
   .commons-bar span{font-weight:700}
   .commons-footer{max-width:680px;margin-left:auto;margin-right:auto;padding-left:20px;padding-right:20px}
 </style>
 </head>
 <body>
 <nav class="commons-bar" aria-label="Aurora Commons sites">
-  <a href="https://auroracommons.github.io/auroracommons/">Aurora Commons</a>
+  <a class="wordmark" href="https://auroracommons.github.io/auroracommons/">Aurora Commons</a>
   <a href="https://auroracommons.github.io/auroracommons/foundations.html">Foundations</a>
   <a href="https://auroracommons.github.io/ground/">Ground</a>
   <span aria-current="page">Still</span>
@@ -87,23 +90,10 @@
 <div class="wrap">
 
 <header>
-  <svg width="72" height="44" viewBox="0 0 72 44" aria-hidden="true">
-    <path d="M10 40 A26 26 0 0 1 62 40" fill="none" stroke="#e8a33d" stroke-width="5" stroke-linecap="round"/>
-    <line x1="2" y1="40" x2="70" y2="40" stroke="#2e5d43" stroke-width="3" stroke-linecap="round"/>
-  </svg>
   <h1>Still</h1>
   <p class="tag">A quiet page. A check in, a breathing pacer, a place to write. Nothing here leaves your device.</p>
   <p class="note">Still is a quiet tool. It is not medical care.</p>
 </header>
-
-<section>
-  <h2>Check in</h2>
-  <p class="sub" id="checkinPrompt">Pick the word closest to how you feel right now.</p>
-  <div class="panel">
-    <div class="words" id="words"></div>
-    <p class="response" id="response" aria-live="polite"></p>
-  </div>
-</section>
 
 <section>
   <h2>Breathe</h2>
@@ -115,6 +105,15 @@
       <button class="btn" id="stopBtn" type="button">Stop</button>
     </div>
     <p class="rounds" id="roundsNote" aria-live="polite"></p>
+  </div>
+</section>
+
+<section>
+  <h2>Check in</h2>
+  <p class="sub" id="checkinPrompt">Pick the word closest to how you feel right now.</p>
+  <div class="panel">
+    <div class="words" id="words"></div>
+    <p class="response" id="response" aria-live="polite"></p>
   </div>
 </section>
 
