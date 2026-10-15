@@ -45,4 +45,6 @@ MIT. See [LICENSE](LICENSE). Copyright (c) 2026 Still contributors.
 
 The 5-4-3-2-1 grounding practice, from the University of Rochester Medical Center's public writing. The 988 Suicide and Crisis Lifeline and Crisis Text Line, whose published lines the crisis block carries word for word in short form. Plain HTML, CSS, and JavaScript that any browser already knows how to run.
 
+Its record is filed in [the Index](https://auroracommons.github.io/index/).
+
 Advised by Groundskeeper.
