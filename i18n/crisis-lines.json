@@ -1,0 +1,138 @@
+{
+  "countries": [
+    {
+      "country": "United States",
+      "hours": "24/7",
+      "languages": "English and Spanish, with voice interpretation in over 240 languages",
+      "note": "FCC page on the 988 Suicide and Crisis Lifeline",
+      "phone": "988",
+      "service": "988 Suicide and Crisis Lifeline",
+      "sourceUrl": "https://www.fcc.gov/988-suicide-and-crisis-lifeline",
+      "status": "verified",
+      "text": "Text 988, or live chat at 988lifeline.org"
+    },
+    {
+      "country": "India",
+      "hours": "24/7",
+      "languages": "Multiple languages; callers can select the language of their choice",
+      "note": "Press Information Bureau, Government of India, release on Tele-MANAS",
+      "phone": "14416",
+      "service": "Tele-MANAS (National Tele Mental Health Programme)",
+      "sourceUrl": "https://www.pib.gov.in/Pressreleaseshare.aspx?PRID=1866498&reg=3&lang=2",
+      "status": "verified",
+      "text": null
+    },
+    {
+      "country": "China",
+      "hours": "At least 18 hours a day",
+      "languages": null,
+      "note": "gov.cn report on the nationwide 12356 hotline; the older Beijing crisis center line also exists",
+      "phone": "12356",
+      "service": "12356 national mental health assistance hotline",
+      "sourceUrl": "http://english.www.gov.cn/news/202412/26/content_WS676c9202c6d0868f4e8ee46c.html",
+      "status": "verified",
+      "text": null
+    },
+    {
+      "country": "Indonesia",
+      "hours": "24 hours",
+      "languages": null,
+      "note": "Ministry of Health (Kemenkes) FAQ document for the Healing119.id hotline",
+      "phone": "119 ext 8",
+      "service": "Healing119.id (Ministry of Health)",
+      "sourceUrl": "https://kesprimkom.kemkes.go.id/assets/uploads/contents/others/FAQ_Cegah_Bunuh_Diri,_Dukung_Kesehatan_Jiwa__Kenali_Layanan_Healing119.id.pdf",
+      "status": "verified",
+      "text": "WhatsApp chat via healing119.id"
+    },
+    {
+      "country": "Pakistan",
+      "hours": "Monday to Friday, 9:30 am to 5:00 pm",
+      "languages": null,
+      "note": "Rozan operator helpline page; toll free 0800-22-444 also listed. Umang could not be verified on its own site, so the operator verified Rozan line is used",
+      "phone": "0304-111-1741",
+      "service": "Rozan Counseling Helpline",
+      "sourceUrl": "https://rozan.org/rozan-counseling-helpline/",
+      "status": "verified",
+      "text": "Email counseling at helpline@rozan.org"
+    },
+    {
+      "country": "Brazil",
+      "hours": "24/7",
+      "languages": null,
+      "note": "CVV operator article marking eight years of the 188 number",
+      "phone": "188",
+      "service": "CVV, Centro de Valorizacao da Vida",
+      "sourceUrl": "http://cvv.org.br/cvv-celebra-os-oito-anos-do-188-que-aproximou-a-escuta-de-milhoes-de-brasileiros/",
+      "status": "verified",
+      "text": "Chat and email at cvv.org.br"
+    },
+    {
+      "country": "Nigeria",
+      "hours": "24 hours",
+      "languages": null,
+      "note": "LifeLine International member page for SURPIN; a Hausa language line via a partner is also listed there",
+      "phone": "0800 078 7746",
+      "service": "SURPIN (Suicide Research and Prevention Initiative)",
+      "sourceUrl": "https://lifeline-international.com/member/nigeria-surpin/",
+      "status": "verified",
+      "text": null
+    },
+    {
+      "country": "Bangladesh",
+      "hours": null,
+      "languages": null,
+      "note": "Operator mission page; the helpline number appears in the site contact block",
+      "phone": "09612-119911",
+      "service": "Kaan Pete Roi",
+      "sourceUrl": "https://kaanpeteroi.org/mission-and-vision/",
+      "status": "verified",
+      "text": null
+    },
+    {
+      "country": "Russia",
+      "hours": "24/7",
+      "languages": null,
+      "note": "FindAHelpline Russia listing, entry marked verified by this helpline; the Children Helpline 8-800-2000-122 is also national",
+      "phone": "+7 495 989-50-50",
+      "service": "Emergency Psychological Assistance EMERCOM of Russia",
+      "sourceUrl": "https://stage.findahelpline.com/countries/ru/topics/supporting-others",
+      "status": "verified",
+      "text": null
+    },
+    {
+      "country": "Mexico",
+      "hours": "24 hours a day, 365 days a year",
+      "languages": null,
+      "note": "gob.mx CONASAMA page for Linea de la Vida",
+      "phone": "800 911 2000",
+      "service": "Linea de la Vida",
+      "sourceUrl": "http://www.gob.mx/conasama/articulos/linea-de-la-vida-800-911-2000",
+      "status": "verified",
+      "text": null
+    },
+    {
+      "country": "Japan",
+      "hours": "Every day, 10:00 am to 10:00 pm for the foreign language line (press 2)",
+      "languages": "Japanese, English, Tagalog, Korean, Chinese, Spanish, Portuguese, Thai, Vietnamese, Nepali, Indonesian and others",
+      "note": "Operator English page; a Ministry of Health, Labour and Welfare subsidized project. TELL Lifeline 0800-300-8355 also serves English speakers",
+      "phone": "0120-279-338",
+      "service": "Yorisoi Hotline",
+      "sourceUrl": "https://www.since2011.net/yorisoi/en/",
+      "status": "verified",
+      "text": "Chat and Facebook Messenger consultation via the operator site"
+    },
+    {
+      "country": "Ethiopia",
+      "hours": null,
+      "languages": null,
+      "note": "No dedicated national suicide or crisis helpline found on operator, government, IASP or FindAHelpline sources. The 8335 code in some aggregator lists traces to a 2020 COVID-19 test result SMS service, not a crisis line, so no number is listed",
+      "phone": null,
+      "service": null,
+      "sourceUrl": null,
+      "status": "unverified",
+      "text": null
+    }
+  ],
+  "status": "STAGED, verified entries checked 2026-10-15 against official or operator sources",
+  "verifiedDate": "2026-10-15"
+}
