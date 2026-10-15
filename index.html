@@ -73,6 +73,8 @@
   .commons-bar .wordmark{font-weight:800}
   .commons-bar span{font-weight:700}
   .commons-footer{max-width:680px;margin-left:auto;margin-right:auto;padding-left:20px;padding-right:20px}
+  .driftband{position:relative;height:14px;border:1px solid var(--line);background:#fff;max-width:520px;margin:0 0 10px}
+  .driftmark{position:absolute;top:0;width:3px;height:100%;background:var(--ink)}
 </style>
 </head>
 <body>
@@ -107,6 +109,19 @@
     <p class="rounds" id="roundsNote" aria-live="polite"></p>
   </div>
 </section>
+<!-- drift:begin -->
+<section aria-labelledby="drift-h">
+  <h2 id="drift-h">Pacer timing, measured</h2>
+  <p class="sub">4 test runs of this pacer stand recorded in test/pacer_measurements.json in this repository, counted on October 15, 2026. Each run watched 9 phase changes over 3 full rounds, and all 9 changes landed in every run. The largest drift in each run was 1, 2, 3, and 18 milliseconds.</p>
+  <div class="driftband" role="img" aria-label="A band from 0 to 20 milliseconds with one mark per recorded test run, at 1, 2, 3, and 18 milliseconds.">
+    <span class="driftmark" style="left:5.0%" title="Run 1: largest drift 1 milliseconds"></span>
+    <span class="driftmark" style="left:10.0%" title="Run 2: largest drift 2 milliseconds"></span>
+    <span class="driftmark" style="left:15.0%" title="Run 3: largest drift 3 milliseconds"></span>
+    <span class="driftmark" style="left:90.0%" title="Run 4: largest drift 18 milliseconds"></span>
+  </div>
+  <p class="sub">Key: one mark per recorded run. A mark's place on the band is that run's largest drift from the ideal phase times. The band runs from 0 to 20 milliseconds, and one unit is one millisecond. These are builder test runs on the build machine, labeled as such in the measurements file. This page collects nothing.</p>
+</section>
+<!-- drift:end -->
 
 <section>
   <h2>Check in</h2>

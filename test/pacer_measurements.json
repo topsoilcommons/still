@@ -1,0 +1,35 @@
+{
+  "about": "Recorded runs of test/test_pacer.js, the pacer timing test in this repository. Each run watches 3 full rounds of the breathing pattern, 9 phase changes in all, and records how far each observed change landed from its ideal time, in milliseconds. These are builder test runs on the build machine. The Still page itself collects nothing and makes no network calls.",
+  "method": "node test/test_pacer.js: 3 full rounds, 9 phase transitions, drift measured against the ideal phase times computed from total elapsed time.",
+  "unit": "milliseconds of drift, largest in the run (max) and average in the run (mean)",
+  "runs": [
+    {
+      "date": "2026-10-15",
+      "source": "Committed test artifact, test/pacer_result.json in this repository.",
+      "transitions": "9 of 9",
+      "max_drift_ms": 1,
+      "mean_drift_ms": 0.56
+    },
+    {
+      "date": "2026-10-15",
+      "source": "Run recorded in the public progress log on the profile, in the entry for the plain style pass.",
+      "transitions": "9 of 9",
+      "max_drift_ms": 2,
+      "mean_drift_ms": null
+    },
+    {
+      "date": "2026-10-15",
+      "source": "Baseline gate run for the Index integration pass, run on the build machine and logged in that pass.",
+      "transitions": "9 of 9",
+      "max_drift_ms": 3,
+      "mean_drift_ms": null
+    },
+    {
+      "date": "2026-10-15",
+      "source": "Gate run during the Index integration pass, run on the build machine while other test suites ran, and logged in that pass. The wide drift under load is kept, not smoothed away.",
+      "transitions": "9 of 9",
+      "max_drift_ms": 18,
+      "mean_drift_ms": 2.56
+    }
+  ]
+}
