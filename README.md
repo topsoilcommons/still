@@ -2,8 +2,6 @@
 
 **Layer 1 of the Ascent: the mind at peace.** Mental health, steadiness, hope.
 
-Aurora Commons addresses the hierarchy of human needs through open source.
-
 First step: open the live page below and pick the word closest to how you feel right now. It takes a few seconds.
 
 ## What Still is
