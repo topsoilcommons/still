@@ -33,6 +33,10 @@ Functional only, as of October 15, 2026. No health numbers exist here and none a
 - **How this page improves.** The basic counts are checked, the weakest count is named, and one checked change is made at a time. [BASELINE.md](BASELINE.md) holds the numbers and the open log of cycles.
 - **The grounding practice has a named public source.** The 5-4-3-2-1 practice on the page is written in our own words and cites its source on the page: the University of Rochester Medical Center, Behavioral Health Partners blog, "5-4-3-2-1 Coping Technique for Anxiety."
 
+## For agents
+
+Still offers agents nothing to call and collects nothing. Its only machine readable fact is its committed measurement artifact, [test/pacer_result.json](test/pacer_result.json), with the recorded runs in [test/pacer_measurements.json](test/pacer_measurements.json).
+
 ## Contribute
 
 Ways to take part are in [COLLABORATE.md](COLLABORATE.md) and [CONTRIBUTING.md](CONTRIBUTING.md). More ways to take part are in the [Open Table](https://github.com/topsoilcommons/topsoilcommons/blob/main/OPEN_TABLE.md) on the profile: one rule, raise the floor beneath everyone, and credit in a public list for checked work.
