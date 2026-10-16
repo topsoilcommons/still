@@ -8,8 +8,11 @@ is simulated: every mark is a run in that file. The strip does not move.
 On this page only the breathing pacer moves, because the pacer is the
 instrument itself.
 
-The surface keeps the plain story only: the strip, a plain line beside it,
-and the plain line of its printed key. The exact millisecond values, each
+The surface states the measured range in plain words: the strip, a plain
+line beside it that gives the smallest and largest drift on
+record, and the plain line of its printed key. The range is computed from
+the measurements file, never typed by hand, so the wording cannot drift
+from the record. The exact millisecond values, each
 with its date, method, and source run, are generated into the closing
 "For agents and builders" section, between the drift-tech markers. The
 technical line of the key lives there too. Nothing is hand placed: change
@@ -42,6 +45,8 @@ def main():
             encoding="utf-8"))
     runs = data["runs"]
     method = data["method"]
+    lo = min(r["max_drift_ms"] for r in runs)
+    hi = max(r["max_drift_ms"] for r in runs)
     marks = "\n".join(
         '    <span class="driftmark" style="left:%.1f%%" title="Run %d: largest drift %d %s"></span>'
         % (100.0 * r["max_drift_ms"] / SCALE_MAX, i + 1, r["max_drift_ms"],
@@ -50,13 +55,13 @@ def main():
     section = """%s
 <section aria-labelledby="drift-h">
   <h2 id="drift-h">Pacer timing, measured</h2>
-  <p class="sub">The pacer keeps close to its marks. Its timing wanders by a hair from round to round, and every test run the builders recorded is shown on the strip below, just as it was measured. One run, taken while the machine was busy with other work, wandered more than the others, and it is shown too.</p>
-  <div class="driftband" role="img" aria-label="A band with one mark for each recorded test run of the pacer. Most marks sit close to the start of the band, and one mark sits farther along.">
+  <p class="sub">The pacer keeps close to its marks. Across the %d test runs the builders recorded, the largest drift in a single run ranged from %d to %d milliseconds. Every run is shown on the strip below, just as it was measured, the widest one included.</p>
+  <div class="driftband" role="img" aria-label="A band with one mark for each recorded test run of the pacer. Across the recorded runs, the largest drift in a single run ranged from %d to %d milliseconds.">
 %s
   </div>
-  <p class="sub">Key: one mark stands for one recorded test run of the pacer. A mark's place on the band shows how far that run's timing wandered from its marks. Most marks sit close together near the start of the band, and one sits farther along. The exact times for each run are listed in the builder record at the bottom of this page.</p>
+  <p class="sub">Key: one mark stands for one recorded test run of the pacer. A mark's place on the band shows how far that run's timing wandered from its marks. Across the recorded runs, the largest drift in a single run ranged from %d to %d milliseconds. The exact times for each run are listed in the builder record at the bottom of this page.</p>
 </section>
-%s""" % (BEGIN, marks, END)
+%s""" % (BEGIN, len(runs), lo, hi, lo, hi, marks, lo, hi, END)
 
     items = []
     for i, r in enumerate(runs):
