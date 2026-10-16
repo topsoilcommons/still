@@ -18,7 +18,7 @@ At the bottom of the page, clearly separated, is a crisis block with the US line
 
 ## Live demo
 
-https://topsoilcommons.github.io/still/ (link placeholder until the repository and Pages are enabled)
+https://topsoilcommons.github.io/still/ (live, verified October 16, 2026)
 
 The need, in the words of the map: a mind that can rest. Treatment and support for suffering, freedom from constant dread, and hope treated as infrastructure: a credible path, proof someone like you walked it, a first step small enough to take today. The full map is [The Ascent](https://github.com/topsoilcommons/topsoilcommons/blob/main/NEEDS.md) on the Topsoil Commons profile.
 
