@@ -124,6 +124,8 @@
     <span class="driftmark" style="left:10.0%" title="Run 2: largest drift 2 milliseconds"></span>
     <span class="driftmark" style="left:15.0%" title="Run 3: largest drift 3 milliseconds"></span>
     <span class="driftmark" style="left:90.0%" title="Run 4: largest drift 18 milliseconds"></span>
+    <span class="driftmark" style="left:5.0%" title="Run 5: largest drift 1 millisecond"></span>
+    <span class="driftmark" style="left:50.0%" title="Run 6: largest drift 10 milliseconds"></span>
   </div>
   <p class="sub">Key: one mark stands for one recorded test run of the pacer. A mark's place on the band shows how far that run's timing wandered from its marks. Most marks sit close together near the start of the band, and one sits farther along. The exact times for each run are listed in the builder record at the bottom of this page.</p>
 </section>
@@ -207,6 +209,8 @@
     <li>Run 2: the largest drift was 2 milliseconds. Date: October 15, 2026. Method: node test/test_pacer.js: 3 full rounds, 9 phase transitions, drift measured against the ideal phase times computed from total elapsed time. Source: Run recorded in the public progress log on the profile, in the entry for the plain style pass.</li>
     <li>Run 3: the largest drift was 3 milliseconds. Date: October 15, 2026. Method: node test/test_pacer.js: 3 full rounds, 9 phase transitions, drift measured against the ideal phase times computed from total elapsed time. Source: Baseline gate run for the Index integration pass, run on the build machine and logged in that pass.</li>
     <li>Run 4: the largest drift was 18 milliseconds, and its average drift was 2.56 milliseconds. Date: October 15, 2026. Method: node test/test_pacer.js: 3 full rounds, 9 phase transitions, drift measured against the ideal phase times computed from total elapsed time. Source: Gate run during the Index integration pass, run on the build machine while other test suites ran, and logged in that pass. The wide drift under load is kept, not smoothed away.</li>
+    <li>Run 5: the largest drift was 1 millisecond, and its average drift was 0.44 milliseconds. Date: October 16, 2026. Method: node test/test_pacer.js: 3 full rounds, 9 phase transitions, drift measured against the ideal phase times computed from total elapsed time. Source: Evolution pass re-measurement, first run of the morning on the build machine with node test/test_pacer.js.</li>
+    <li>Run 6: the largest drift was 10 milliseconds, and its average drift was 1.56 milliseconds. Date: October 16, 2026. Method: node test/test_pacer.js: 3 full rounds, 9 phase transitions, drift measured against the ideal phase times computed from total elapsed time. Source: Evolution pass re-measurement, second run of the morning on the build machine while other work ran on the same machine. Full output in test/pacer_result.json. The wider drift under load is kept, not smoothed away.</li>
 </ul>
 <p>Key, technical line: one mark per recorded run. A mark's place on the band is that run's largest drift from the ideal phase times. The band runs from 0 to 20 milliseconds, and one unit is one millisecond. These are builder test runs on the build machine, labeled as such in the measurements file. This page collects nothing and makes no network calls.</p>
 <!-- drift-tech:end -->

@@ -30,6 +30,20 @@
       "transitions": "9 of 9",
       "max_drift_ms": 18,
       "mean_drift_ms": 2.56
+    },
+    {
+      "date": "2026-10-16",
+      "source": "Evolution pass re-measurement, first run of the morning on the build machine with node test/test_pacer.js.",
+      "transitions": "9 of 9",
+      "max_drift_ms": 1,
+      "mean_drift_ms": 0.44
+    },
+    {
+      "date": "2026-10-16",
+      "source": "Evolution pass re-measurement, second run of the morning on the build machine while other work ran on the same machine. Full output in test/pacer_result.json. The wider drift under load is kept, not smoothed away.",
+      "transitions": "9 of 9",
+      "max_drift_ms": 10,
+      "mean_drift_ms": 1.56
     }
   ]
 }
