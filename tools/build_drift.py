@@ -34,6 +34,14 @@ TECH_END = "<!-- drift-tech:end -->"
 SCALE_MAX = 20
 
 
+def scale_max(hi):
+    """Band ceiling: at least SCALE_MAX, else the next multiple of 10 above
+    the widest recorded drift, so every mark stays on the band."""
+    if hi <= SCALE_MAX:
+        return SCALE_MAX
+    return int(-(-hi // 10) * 10)
+
+
 def fmt_date(value):
     parsed = date.fromisoformat(value)
     return parsed.strftime("%B %-d, %Y")
@@ -49,7 +57,7 @@ def main():
     hi = max(r["max_drift_ms"] for r in runs)
     marks = "\n".join(
         '    <span class="driftmark" style="left:%.1f%%" title="Run %d: largest drift %d %s"></span>'
-        % (100.0 * r["max_drift_ms"] / SCALE_MAX, i + 1, r["max_drift_ms"],
+        % (100.0 * r["max_drift_ms"] / scale_max(hi), i + 1, r["max_drift_ms"],
            "millisecond" if r["max_drift_ms"] == 1 else "milliseconds")
         for i, r in enumerate(runs))
     section = """%s
@@ -82,7 +90,7 @@ def main():
 %s
 </ul>
 <p>Key, technical line: one mark per recorded run. A mark's place on the band is that run's largest drift from the ideal phase times. The band runs from 0 to %d milliseconds, and one unit is one millisecond. These are builder test runs on the build machine, labeled as such in the measurements file. This page collects nothing and makes no network calls.</p>
-%s""" % (TECH_BEGIN, "\n".join(items), SCALE_MAX, TECH_END)
+%s""" % (TECH_BEGIN, "\n".join(items), scale_max(hi), TECH_END)
 
     path = ROOT / "index.html"
     page = path.read_text(encoding="utf-8")
