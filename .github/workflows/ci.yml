@@ -1,0 +1,23 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+      - name: Pacer timing test
+        run: node test/test_pacer.js
+      - name: Drift strip in sync with the measurements record
+        run: |
+          python3 tools/build_drift.py
+          git diff --exit-code index.html
+      - name: No network calls in the page
+        run: '! grep -nE "fetch\(|XMLHttpRequest|sendBeacon|new WebSocket|new EventSource" index.html'
