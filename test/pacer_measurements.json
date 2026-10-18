@@ -72,6 +72,13 @@
       "transitions": "9 of 9",
       "max_drift_ms": 3,
       "mean_drift_ms": 0.78
+    },
+    {
+      "date": "2026-10-18",
+      "source": "Evolution pass re-measurement, morning run on the build machine with node test/test_pacer.js. Full output in test/pacer_result.json.",
+      "transitions": "9 of 9",
+      "max_drift_ms": 1,
+      "mean_drift_ms": 0.22
     }
   ]
 }
