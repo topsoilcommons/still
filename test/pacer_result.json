@@ -1,32 +1,32 @@
 {
   "test": "still pacer phase timing",
-  "date": "2026-10-18T13:19:05.938Z",
+  "date": "2026-10-18T22:18:31.613Z",
   "cycle_ms": 14000,
   "cycles_run": 3,
   "transitions_expected": 9,
   "transitions_observed": 9,
   "max_abs_drift_ms": 1,
-  "mean_abs_drift_ms": 0.22,
+  "mean_abs_drift_ms": 0.56,
   "drifts": [
     {
       "ideal_ms": 4000,
-      "observed_ms": 4001,
-      "drift_ms": 1
+      "observed_ms": 4000,
+      "drift_ms": 0
     },
     {
       "ideal_ms": 8000,
-      "observed_ms": 8001,
-      "drift_ms": 1
+      "observed_ms": 8000,
+      "drift_ms": 0
     },
     {
       "ideal_ms": 14000,
-      "observed_ms": 14000,
-      "drift_ms": 0
+      "observed_ms": 14001,
+      "drift_ms": 1
     },
     {
       "ideal_ms": 18000,
-      "observed_ms": 18000,
-      "drift_ms": 0
+      "observed_ms": 18001,
+      "drift_ms": 1
     },
     {
       "ideal_ms": 22000,
@@ -35,8 +35,8 @@
     },
     {
       "ideal_ms": 28000,
-      "observed_ms": 28000,
-      "drift_ms": 0
+      "observed_ms": 28001,
+      "drift_ms": 1
     },
     {
       "ideal_ms": 32000,
@@ -45,13 +45,13 @@
     },
     {
       "ideal_ms": 36000,
-      "observed_ms": 36000,
-      "drift_ms": 0
+      "observed_ms": 36001,
+      "drift_ms": 1
     },
     {
       "ideal_ms": 42000,
-      "observed_ms": 42000,
-      "drift_ms": 0
+      "observed_ms": 42001,
+      "drift_ms": 1
     }
   ]
 }
