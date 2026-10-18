@@ -1,6 +1,8 @@
 # Still
 
-**Layer 1 of the Ascent: the mind at peace.** Mental health, steadiness, hope.
+Still is a quiet, single page tool to check in, breathe, and write. One file, zero network calls, and nothing you write leaves your device. Its breathing pacer is measured, not assumed: ten recorded runs stand in the record, the latest with a largest drift of 3 ms.
+
+Layer 1 of Topsoil Commons: the mind at peace. Mental health, steadiness, hope.
 
 First step: open the live page below and pick the word closest to how you feel right now. It takes a few seconds.
 

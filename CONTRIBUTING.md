@@ -19,3 +19,11 @@ Contributions are welcome. The house rules here are few and firm: no medical cla
 ## Pull requests
 
 Keep them small and single purpose. State the evidence in the PR description: what you ran or checked and what it showed. Contributors are named in release notes, by name, stage name, or anonymously, as they choose.
+
+## Ways in, by level
+
+**First hour.** Rerun the pacer test (node test/test_pacer.js) on your machine and file the output, or recheck the crisis lines against their operators' pages. Both are written out above, and neither assumes experience with this project.
+
+**First week.** Test the page offline in a browser the record has not covered, or read the whole page aloud and file every sentence that sounds clinical, cold, or confusing. Wording is this project's whole surface.
+
+**The deep end.** The page speaks one language. A full Spanish rendering stands staged in i18n/, with 13 of its 60 checked strings disputed, and it ships only after a fluent human reader resolves every dispute. If you are that reader, this is the deepest work here. The pacer's timing record stands beside it: ten recorded runs, the widest drift 106 ms under load, the latest 3 ms.
