@@ -1,22 +1,22 @@
 {
   "test": "still pacer phase timing",
-  "date": "2026-10-18T22:18:31.613Z",
+  "date": "2026-10-19T13:18:55.891Z",
   "cycle_ms": 14000,
   "cycles_run": 3,
   "transitions_expected": 9,
   "transitions_observed": 9,
-  "max_abs_drift_ms": 1,
-  "mean_abs_drift_ms": 0.56,
+  "max_abs_drift_ms": 2,
+  "mean_abs_drift_ms": 1,
   "drifts": [
     {
       "ideal_ms": 4000,
-      "observed_ms": 4000,
-      "drift_ms": 0
+      "observed_ms": 4002,
+      "drift_ms": 2
     },
     {
       "ideal_ms": 8000,
-      "observed_ms": 8000,
-      "drift_ms": 0
+      "observed_ms": 8001,
+      "drift_ms": 1
     },
     {
       "ideal_ms": 14000,
@@ -30,18 +30,18 @@
     },
     {
       "ideal_ms": 22000,
-      "observed_ms": 22000,
-      "drift_ms": 0
-    },
-    {
-      "ideal_ms": 28000,
-      "observed_ms": 28001,
+      "observed_ms": 22001,
       "drift_ms": 1
     },
     {
-      "ideal_ms": 32000,
-      "observed_ms": 32000,
+      "ideal_ms": 28000,
+      "observed_ms": 28000,
       "drift_ms": 0
+    },
+    {
+      "ideal_ms": 32000,
+      "observed_ms": 32001,
+      "drift_ms": 1
     },
     {
       "ideal_ms": 36000,
