@@ -129,7 +129,7 @@
 <!-- drift:begin -->
 <section aria-labelledby="drift-h">
   <h2 id="drift-h">Pacer timing, measured</h2>
-  <p class="sub">The pacer keeps close to its marks. Across the 15 test runs the builders recorded, the largest drift in a single run ranged from 1 to 106 milliseconds. Every run is shown on the strip below, just as it was measured, the widest one included.</p>
+  <p class="sub">The pacer keeps close to its marks. Across the 16 test runs the builders recorded, the largest drift in a single run ranged from 1 to 106 milliseconds. Every run is shown on the strip below, just as it was measured, the widest one included.</p>
   <div class="driftband" role="img" aria-label="A band with one mark for each recorded test run of the pacer. Across the recorded runs, the largest drift in a single run ranged from 1 to 106 milliseconds.">
     <span class="driftmark" style="left:0.9%" title="Run 1: largest drift 1 millisecond"></span>
     <span class="driftmark" style="left:1.8%" title="Run 2: largest drift 2 milliseconds"></span>
@@ -146,6 +146,7 @@
     <span class="driftmark" style="left:1.8%" title="Run 13: largest drift 2 milliseconds"></span>
     <span class="driftmark" style="left:1.8%" title="Run 14: largest drift 2 milliseconds"></span>
     <span class="driftmark" style="left:1.8%" title="Run 15: largest drift 2 milliseconds"></span>
+    <span class="driftmark" style="left:1.8%" title="Run 16: largest drift 2 milliseconds"></span>
   </div>
   <p class="sub">Key: one mark stands for one recorded test run of the pacer. A mark's place on the band shows how far that run's timing wandered from its marks. Across the recorded runs, the largest drift in a single run ranged from 1 to 106 milliseconds. The exact times for each run are listed in the builder record at the bottom of this page.</p>
 </section>
@@ -256,6 +257,7 @@
     <li>Run 13: the largest drift was 2 milliseconds, and its average drift was 0.56 milliseconds. Date: October 19, 2026. Method: node test/test_pacer.js: 3 full rounds, 9 phase transitions, drift measured against the ideal phase times computed from total elapsed time. Source: Evolution pass re-measurement, morning run on the build machine with node test/test_pacer.js.</li>
     <li>Run 14: the largest drift was 2 milliseconds, and its average drift was 1 milliseconds. Date: October 19, 2026. Method: node test/test_pacer.js: 3 full rounds, 9 phase transitions, drift measured against the ideal phase times computed from total elapsed time. Source: Evolution pass re-measurement, morning run on the build machine with node test/test_pacer.js. Full output in test/pacer_result.json.</li>
     <li>Run 15: the largest drift was 2 milliseconds, and its average drift was 0.67 milliseconds. Date: October 19, 2026. Method: node test/test_pacer.js: 3 full rounds, 9 phase transitions, drift measured against the ideal phase times computed from total elapsed time. Source: Evolution pass re-measurement, evening run on the build machine with node test/test_pacer.js. Full output in test/pacer_result.json.</li>
+    <li>Run 16: the largest drift was 2 milliseconds, and its average drift was 0.67 milliseconds. Date: October 20, 2026. Method: node test/test_pacer.js: 3 full rounds, 9 phase transitions, drift measured against the ideal phase times computed from total elapsed time. Source: Committed test artifact, test/pacer_result.json in this repository.</li>
 </ul>
 <p>Key, technical line: one mark per recorded run. A mark's place on the band is that run's largest drift from the ideal phase times. The band runs from 0 to 110 milliseconds, and one unit is one millisecond. These are builder test runs on the build machine, labeled as such in the measurements file. This page collects nothing and makes no network calls.</p>
 <!-- drift-tech:end -->
